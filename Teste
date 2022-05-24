@@ -1,0 +1,124 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Componentes
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label2.Visible = true;
+            comboBox1.Visible = true;
+            label3.Visible = true;
+            radioButton1.Visible = true;
+            radioButton2.Visible = true;
+            radioButton3.Visible = true;
+
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;
+            checkBox1.Visible = false;
+            checkBox2.Visible = false;
+            if (listBox1.SelectedIndex == 0)
+            {
+                comboBox1.Items.Clear();
+                label1.Text = "Fundo Game of Thrones";
+                comboBox1.Items.Add("");
+                comboBox1.Items.Add("Game of Thrones 1");
+                comboBox1.Items.Add("Game of Thrones 2");
+                comboBox1.Items.Add("Game of Thrones 3");
+                comboBox1.SelectedIndex = 0;
+                label3.Text = "Escolha o dragão";
+                radioButton1.Text = "Drogon";
+                radioButton2.Text = "Viserion";
+                radioButton3.Text = "Rhaegal";
+            }
+            else if (listBox1.SelectedIndex == 1)
+            {
+                comboBox1.Items.Clear();
+                label1.Text = "Fundo Supernatural";
+                comboBox1.Items.Add("");
+                comboBox1.Items.Add("Supernatural 1");
+                comboBox1.Items.Add("Supernatural 2");
+                comboBox1.Items.Add("Supernatural 3");
+                comboBox1.SelectedIndex = 0;
+                label3.Text = "Escolha o personagem ";
+                radioButton1.Text = "Dean";
+                radioButton2.Text = "Sam";
+                radioButton3.Text = "Castiel";
+            }
+            else if (listBox1.SelectedIndex == 2)
+            {
+                comboBox1.Items.Clear();
+                label1.Text = "Fundo Umbrella Academy";
+                comboBox1.Items.Add("");
+                comboBox1.Items.Add("Umbrella Academy 1");
+                comboBox1.Items.Add("Umbrella Academy 2");
+                comboBox1.Items.Add("Umbrella Academy 3");
+                comboBox1.SelectedIndex = 0;
+                label3.Text = "Escolha o personagem ";
+                radioButton1.Text = "Klaus Hargreeves | Número Quatro";
+                radioButton2.Text = "Número Cinco";
+                radioButton3.Text = "Allison Hargreeves/Chestnut | Número Três";
+            }
+            else if (listBox1.SelectedIndex == 3)
+            {
+                comboBox1.Items.Clear();
+                label1.Text = "Fundo The Boys";
+                comboBox1.Items.Add("");
+                comboBox1.Items.Add("The Boys 1");
+                comboBox1.Items.Add("The Boys 2");
+                comboBox1.Items.Add("The Boys 3");
+                comboBox1.SelectedIndex = 0;
+                label3.Text = "Escolha o personagem ";
+                radioButton1.Text = "Billy Bruto";
+                radioButton2.Text = "Francês";
+                radioButton3.Text = "Leitinho de Mamãe";
+            }
+            else if (listBox1.SelectedIndex == 4)
+            {
+                comboBox1.Items.Clear();
+                label1.Text = "Fundo Loky";
+                comboBox1.Items.Add("");
+                comboBox1.Items.Add("The Loky");
+                comboBox1.Items.Add("The Boys 2");
+                comboBox1.Items.Add("The Boys 3");
+                comboBox1.SelectedIndex = 0;
+                label3.Text = "Escolha o personagem ";
+                radioButton1.Text = "Billy Bruto";
+                radioButton2.Text = "Francês";
+                radioButton3.Text = "Leitinho de Mamãe";
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "")
+            {
+                this.BackgroundImage = null;
+            }
+            else if (comboBox1.Text == "Game of Thrones 1")
+            {
+                this.BackgroundImage = Properties.Resources.g1;
+
+            }
+        }
+    }
+}
